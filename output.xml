@@ -1,195 +1,450 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.11 on win32)" generated="20230520 23:00:59.408" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.11 on win32)" generated="20230521 00:07:25.625" rpa="false" schemaversion="3">
 <suite id="s1" name="Frontend-Test-Suite" source="D:\projects\Software Testing\Assignment 3\Software-Testing-Assi3-Frontend\Frontend-Test-Suite.robot">
-<test id="s1-t1" name="Delete TODO" line="23">
+<test id="s1-t1" name="Get completed" line="106">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>http://127.0.0.1:5500/todo.html</arg>
 <arg>edge</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230520 23:01:00.056" level="INFO">Opening browser 'edge' to base url 'http://127.0.0.1:5500/todo.html'.</msg>
-<msg timestamp="20230520 23:01:00.126" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230520 23:01:00.055" endtime="20230520 23:01:03.488"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://127.0.0.1:5500/todo.html</arg>
-<arg>edge</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230520 23:01:03.492" level="INFO">Opening browser 'edge' to base url 'http://127.0.0.1:5500/todo.html'.</msg>
-<msg timestamp="20230520 23:01:03.532" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230520 23:01:03.491" endtime="20230520 23:01:08.757"/>
+<msg timestamp="20230521 00:07:26.849" level="INFO">Opening browser 'edge' to base url 'http://127.0.0.1:5500/todo.html'.</msg>
+<msg timestamp="20230521 00:07:26.936" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230521 00:07:26.847" endtime="20230521 00:07:33.402"/>
 </kw>
 <kw name="Generate Random String" library="String">
 <var>${firstTitle}</var>
 <arg>20</arg>
 <arg>[LETTERS]</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20230520 23:01:08.781" level="INFO">${firstTitle} = VTBCRApMeBqncStFcZCE</msg>
-<status status="PASS" starttime="20230520 23:01:08.780" endtime="20230520 23:01:08.781"/>
+<msg timestamp="20230521 00:07:33.403" level="INFO">${firstTitle} = oYicPlHrqNhFsAtQFLIS</msg>
+<status status="PASS" starttime="20230521 00:07:33.403" endtime="20230521 00:07:33.404"/>
 </kw>
 <kw name="Generate Random String" library="String">
 <var>${firstDesc}</var>
 <arg>64</arg>
 <arg>[LETTERS]</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20230520 23:01:08.785" level="INFO">${firstDesc} = ZclgXQsHydIIgkFpBrljxGHfqDgTNVpKULlkaKpaEUvIIPFtOBjWIZQWIPYTzZNB</msg>
-<status status="PASS" starttime="20230520 23:01:08.784" endtime="20230520 23:01:08.785"/>
+<msg timestamp="20230521 00:07:33.405" level="INFO">${firstDesc} = RiHrpadFDhvnPQccIBjArLRNOVLmAjPMagoEHQWeWsKcRhXlqqBTqqGTbpsfbVUi</msg>
+<status status="PASS" starttime="20230521 00:07:33.404" endtime="20230521 00:07:33.405"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="todo"]</arg>
 <arg>${firstTitle}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230520 23:01:08.787" level="INFO">Typing text 'VTBCRApMeBqncStFcZCE' into text field '//*[@id="todo"]'.</msg>
-<status status="PASS" starttime="20230520 23:01:08.786" endtime="20230520 23:01:09.099"/>
+<msg timestamp="20230521 00:07:33.407" level="INFO">Typing text 'oYicPlHrqNhFsAtQFLIS' into text field '//*[@id="todo"]'.</msg>
+<status status="PASS" starttime="20230521 00:07:33.405" endtime="20230521 00:07:33.690"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="desc"]</arg>
 <arg>${firstDesc}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230520 23:01:09.101" level="INFO">Typing text 'ZclgXQsHydIIgkFpBrljxGHfqDgTNVpKULlkaKpaEUvIIPFtOBjWIZQWIPYTzZNB' into text field '//*[@id="desc"]'.</msg>
-<status status="PASS" starttime="20230520 23:01:09.100" endtime="20230520 23:01:09.398"/>
+<msg timestamp="20230521 00:07:33.693" level="INFO">Typing text 'RiHrpadFDhvnPQccIBjArLRNOVLmAjPMagoEHQWeWsKcRhXlqqBTqqGTbpsfbVUi' into text field '//*[@id="desc"]'.</msg>
+<status status="PASS" starttime="20230521 00:07:33.691" endtime="20230521 00:07:33.972"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@id="todo-form"]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230520 23:01:09.399" level="INFO">Clicking button '//*[@id="todo-form"]/button'.</msg>
-<status status="PASS" starttime="20230520 23:01:09.398" endtime="20230520 23:01:09.500"/>
+<msg timestamp="20230521 00:07:33.974" level="INFO">Clicking button '//*[@id="todo-form"]/button'.</msg>
+<status status="PASS" starttime="20230521 00:07:33.973" endtime="20230521 00:07:34.073"/>
 </kw>
 <kw name="Generate Random String" library="String">
-<var>${title}</var>
+<var>${secondTitle}</var>
 <arg>20</arg>
 <arg>[LETTERS]</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20230520 23:01:09.511" level="INFO">${title} = uCjHNyOgImyHiCGrSkWs</msg>
-<status status="PASS" starttime="20230520 23:01:09.510" endtime="20230520 23:01:09.511"/>
+<msg timestamp="20230521 00:07:34.077" level="INFO">${secondTitle} = vYSSsGAKkkpPyWABbZAP</msg>
+<status status="PASS" starttime="20230521 00:07:34.076" endtime="20230521 00:07:34.077"/>
 </kw>
 <kw name="Generate Random String" library="String">
-<var>${desc}</var>
+<var>${secondDesc}</var>
 <arg>64</arg>
 <arg>[LETTERS]</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20230520 23:01:09.513" level="INFO">${desc} = NKHHOqlCUOteegBvBkOCryZyCdxSSxAVJLLiogqkWdLJwlApKTbsmCGXSQXSRput</msg>
-<status status="PASS" starttime="20230520 23:01:09.512" endtime="20230520 23:01:09.513"/>
+<msg timestamp="20230521 00:07:34.078" level="INFO">${secondDesc} = ayBiMfQSwSKjDzFFAJlDWdUlpOqfNXHxeKqPEjBOiTYVMubVbkTIaZQUEjFoDNcf</msg>
+<status status="PASS" starttime="20230521 00:07:34.078" endtime="20230521 00:07:34.078"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="todo"]</arg>
-<arg>${title}</arg>
+<arg>${secondTitle}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230520 23:01:09.517" level="INFO">Typing text 'uCjHNyOgImyHiCGrSkWs' into text field '//*[@id="todo"]'.</msg>
-<status status="PASS" starttime="20230520 23:01:09.517" endtime="20230520 23:01:09.729"/>
+<msg timestamp="20230521 00:07:34.080" level="INFO">Typing text 'vYSSsGAKkkpPyWABbZAP' into text field '//*[@id="todo"]'.</msg>
+<status status="PASS" starttime="20230521 00:07:34.079" endtime="20230521 00:07:34.290"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="desc"]</arg>
-<arg>${desc}</arg>
+<arg>${secondDesc}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230520 23:01:09.731" level="INFO">Typing text 'NKHHOqlCUOteegBvBkOCryZyCdxSSxAVJLLiogqkWdLJwlApKTbsmCGXSQXSRput' into text field '//*[@id="desc"]'.</msg>
-<status status="PASS" starttime="20230520 23:01:09.730" endtime="20230520 23:01:10.058"/>
+<msg timestamp="20230521 00:07:34.292" level="INFO">Typing text 'ayBiMfQSwSKjDzFFAJlDWdUlpOqfNXHxeKqPEjBOiTYVMubVbkTIaZQUEjFoDNcf' into text field '//*[@id="desc"]'.</msg>
+<status status="PASS" starttime="20230521 00:07:34.291" endtime="20230521 00:07:34.635"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@id="todo-form"]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.062" level="INFO">Clicking button '//*[@id="todo-form"]/button'.</msg>
-<status status="PASS" starttime="20230520 23:01:10.061" endtime="20230520 23:01:10.154"/>
+<msg timestamp="20230521 00:07:34.637" level="INFO">Clicking button '//*[@id="todo-form"]/button'.</msg>
+<status status="PASS" starttime="20230521 00:07:34.636" endtime="20230521 00:07:34.717"/>
 </kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${temp}</var>
+<kw name="Generate Random String" library="String">
+<var>${thridTitle}</var>
+<arg>20</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20230521 00:07:34.719" level="INFO">${thridTitle} = iOTuwfJtCnfuVLXVCpvQ</msg>
+<status status="PASS" starttime="20230521 00:07:34.718" endtime="20230521 00:07:34.719"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${thridDesc}</var>
+<arg>64</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20230521 00:07:34.720" level="INFO">${thridDesc} = IsZCVVecmuuprKfMvuOmTHnmxOxvkKnnHikJpRVgWhhBKDvGeNPwrIBsRsyuJiMg</msg>
+<status status="PASS" starttime="20230521 00:07:34.719" endtime="20230521 00:07:34.720"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="todo"]</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.202" level="INFO">${temp} = </msg>
-<status status="PASS" starttime="20230520 23:01:10.155" endtime="20230520 23:01:10.202"/>
+<arg>${thridTitle}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230521 00:07:34.722" level="INFO">Typing text 'iOTuwfJtCnfuVLXVCpvQ' into text field '//*[@id="todo"]'.</msg>
+<status status="PASS" starttime="20230521 00:07:34.721" endtime="20230521 00:07:34.905"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${EMPTY}</arg>
-<arg>${temp}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230520 23:01:10.203" endtime="20230520 23:01:10.205"/>
-</kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${temp}</var>
+<kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="desc"]</arg>
-<arg>value</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.249" level="INFO">${temp} = </msg>
-<status status="PASS" starttime="20230520 23:01:10.206" endtime="20230520 23:01:10.249"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${EMPTY}</arg>
-<arg>${temp}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230520 23:01:10.250" endtime="20230520 23:01:10.251"/>
-</kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${insertedTitle}</var>
-<arg>//tr[last()]/td[2]</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.275" level="INFO">${insertedTitle} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f97142d2883c025e487e8b00b6dff12e", element="D258C9415B7FD094EEF03EA5E888AD05_element_9")&gt;</msg>
-<status status="PASS" starttime="20230520 23:01:10.252" endtime="20230520 23:01:10.275"/>
-</kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${insertedDesc}</var>
-<arg>//tr[last()]/td[3]</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.302" level="INFO">${insertedDesc} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f97142d2883c025e487e8b00b6dff12e", element="D258C9415B7FD094EEF03EA5E888AD05_element_10")&gt;</msg>
-<status status="PASS" starttime="20230520 23:01:10.278" endtime="20230520 23:01:10.302"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${insertedTitle.text}</arg>
-<arg>${title}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230520 23:01:10.303" endtime="20230520 23:01:10.331"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${insertedDesc.text}</arg>
-<arg>${desc}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230520 23:01:10.332" endtime="20230520 23:01:10.351"/>
-</kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${deleteButton}</var>
-<arg>//tr[last()]/td[last()]/button</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.370" level="INFO">${deleteButton} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f97142d2883c025e487e8b00b6dff12e", element="D258C9415B7FD094EEF03EA5E888AD05_element_11")&gt;</msg>
-<status status="PASS" starttime="20230520 23:01:10.352" endtime="20230520 23:01:10.370"/>
+<arg>${thridDesc}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230521 00:07:34.907" level="INFO">Typing text 'IsZCVVecmuuprKfMvuOmTHnmxOxvkKnnHikJpRVgWhhBKDvGeNPwrIBsRsyuJiMg' into text field '//*[@id="desc"]'.</msg>
+<status status="PASS" starttime="20230521 00:07:34.905" endtime="20230521 00:07:35.161"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${deleteButton}</arg>
+<arg>//*[@id="todo-form"]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.371" level="INFO">Clicking button '&lt;selenium.webdriver.remote.webelement.WebElement (session="f97142d2883c025e487e8b00b6dff12e", element="D258C9415B7FD094EEF03EA5E888AD05_element_11")&gt;'.</msg>
-<status status="PASS" starttime="20230520 23:01:10.371" endtime="20230520 23:01:10.451"/>
+<msg timestamp="20230521 00:07:35.165" level="INFO">Clicking button '//*[@id="todo-form"]/button'.</msg>
+<status status="PASS" starttime="20230521 00:07:35.164" endtime="20230521 00:07:35.240"/>
 </kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${insertedTitle}</var>
-<arg>//tr[last()]/td[2]</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.480" level="INFO">${insertedTitle} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f97142d2883c025e487e8b00b6dff12e", element="D258C9415B7FD094EEF03EA5E888AD05_element_17")&gt;</msg>
-<status status="PASS" starttime="20230520 23:01:10.452" endtime="20230520 23:01:10.481"/>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//tr[last()]/td[4]/input</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230521 00:07:35.242" level="INFO">Selecting checkbox '//tr[last()]/td[4]/input'.</msg>
+<status status="PASS" starttime="20230521 00:07:35.241" endtime="20230521 00:07:35.348"/>
 </kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${insertedDesc}</var>
-<arg>//tr[last()]/td[3]</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230520 23:01:10.499" level="INFO">${insertedDesc} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f97142d2883c025e487e8b00b6dff12e", element="D258C9415B7FD094EEF03EA5E888AD05_element_18")&gt;</msg>
-<status status="PASS" starttime="20230520 23:01:10.482" endtime="20230520 23:01:10.499"/>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//tr[last() - 1]/td[4]/input</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230521 00:07:35.355" level="INFO">Selecting checkbox '//tr[last() - 1]/td[4]/input'.</msg>
+<status status="PASS" starttime="20230521 00:07:35.354" endtime="20230521 00:07:35.451"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${insertedTitle.text}</arg>
-<arg>${firstTitle}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230520 23:01:10.499" endtime="20230520 23:01:10.518"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//html/body/div/div/div[2]/button[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230521 00:07:35.453" level="INFO">Clicking button '//html/body/div/div/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20230521 00:07:35.452" endtime="20230521 00:07:35.549"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${insertedDesc.text}</arg>
-<arg>${firstDesc}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230520 23:01:10.520" endtime="20230520 23:01:10.538"/>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${checkboxes}</var>
+<arg>//input[contains(@type, 'checkbox')]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230521 00:07:35.597" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_18")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement...</msg>
+<status status="PASS" starttime="20230521 00:07:35.550" endtime="20230521 00:07:35.597"/>
 </kw>
+<for flavor="IN">
+<var>${checkbox}</var>
+<value>@{checkboxes}</value>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_18")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.599" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_18")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.598" endtime="20230521 00:07:35.607"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.598" endtime="20230521 00:07:35.607"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_19")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.608" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_19")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.607" endtime="20230521 00:07:35.620"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.607" endtime="20230521 00:07:35.620"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_20")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.621" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_20")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.620" endtime="20230521 00:07:35.631"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.620" endtime="20230521 00:07:35.631"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_21")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.633" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_21")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.631" endtime="20230521 00:07:35.640"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.631" endtime="20230521 00:07:35.640"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_22")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.641" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_22")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.641" endtime="20230521 00:07:35.654"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.640" endtime="20230521 00:07:35.654"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_23")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.655" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_23")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.654" endtime="20230521 00:07:35.665"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.654" endtime="20230521 00:07:35.665"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_24")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.666" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_24")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.666" endtime="20230521 00:07:35.673"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.666" endtime="20230521 00:07:35.674"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_25")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.674" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_25")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.674" endtime="20230521 00:07:35.684"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.674" endtime="20230521 00:07:35.684"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_26")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.685" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_26")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.684" endtime="20230521 00:07:35.692"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.684" endtime="20230521 00:07:35.692"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_27")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.694" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_27")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.693" endtime="20230521 00:07:35.701"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.693" endtime="20230521 00:07:35.701"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_28")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.703" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_28")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.702" endtime="20230521 00:07:35.710"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.702" endtime="20230521 00:07:35.710"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_29")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.711" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_29")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.711" endtime="20230521 00:07:35.718"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.711" endtime="20230521 00:07:35.718"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_30")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.719" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_30")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.718" endtime="20230521 00:07:35.726"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.718" endtime="20230521 00:07:35.726"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_31")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.727" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_31")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.727" endtime="20230521 00:07:35.734"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.727" endtime="20230521 00:07:35.734"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_32")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.735" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_32")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.735" endtime="20230521 00:07:35.742"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.735" endtime="20230521 00:07:35.742"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_33")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.743" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_33")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.742" endtime="20230521 00:07:35.750"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.742" endtime="20230521 00:07:35.750"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_34")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.751" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_34")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.751" endtime="20230521 00:07:35.759"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.750" endtime="20230521 00:07:35.759"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_35")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.759" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_35")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.759" endtime="20230521 00:07:35.768"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.759" endtime="20230521 00:07:35.768"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_36")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.770" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_36")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.769" endtime="20230521 00:07:35.778"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.768" endtime="20230521 00:07:35.778"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_37")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.779" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_37")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.778" endtime="20230521 00:07:35.787"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.778" endtime="20230521 00:07:35.787"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_38")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.788" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_38")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.787" endtime="20230521 00:07:35.795"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.787" endtime="20230521 00:07:35.795"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_39")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.796" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_39")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.796" endtime="20230521 00:07:35.804"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.796" endtime="20230521 00:07:35.804"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_40")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.805" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_40")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.804" endtime="20230521 00:07:35.812"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.804" endtime="20230521 00:07:35.812"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_41")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.812" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_41")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.812" endtime="20230521 00:07:35.819"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.812" endtime="20230521 00:07:35.819"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_42")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.820" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_42")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.820" endtime="20230521 00:07:35.827"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.820" endtime="20230521 00:07:35.827"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_43")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.828" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_43")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.828" endtime="20230521 00:07:35.835"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.827" endtime="20230521 00:07:35.835"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_44")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.836" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_44")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.836" endtime="20230521 00:07:35.843"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.835" endtime="20230521 00:07:35.844"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_45")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.845" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_45")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.844" endtime="20230521 00:07:35.851"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.844" endtime="20230521 00:07:35.852"/>
+</iter>
+<iter>
+<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_46")&gt;</var>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230521 00:07:35.852" level="INFO">Verifying checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="09f2f56bd8779315eb6792b60fea21de", element="5A73FFE42E08EC4378862CBF32F4D76B_element_46")&gt;' is selected.</msg>
+<status status="PASS" starttime="20230521 00:07:35.852" endtime="20230521 00:07:35.860"/>
+</kw>
+<status status="PASS" starttime="20230521 00:07:35.852" endtime="20230521 00:07:35.860"/>
+</iter>
+<status status="PASS" starttime="20230521 00:07:35.598" endtime="20230521 00:07:35.860"/>
+</for>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230520 23:01:10.539" endtime="20230520 23:01:12.913"/>
+<status status="PASS" starttime="20230521 00:07:35.860" endtime="20230521 00:07:38.402"/>
 </kw>
-<status status="PASS" starttime="20230520 23:01:00.052" endtime="20230520 23:01:12.915"/>
+<status status="PASS" starttime="20230521 00:07:26.814" endtime="20230521 00:07:38.402"/>
 </test>
-<status status="PASS" starttime="20230520 23:00:59.410" endtime="20230520 23:01:12.918"/>
+<status status="PASS" starttime="20230521 00:07:25.629" endtime="20230521 00:07:38.405"/>
 </suite>
 <statistics>
 <total>
