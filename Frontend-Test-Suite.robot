@@ -59,11 +59,11 @@ Update completion
     Input Text    //*[@id="desc"]    ${secondDesc}
     Click Button    //*[@id="todo-form"]/button
 
-    Select Checkbox    //tr[last()]/td[4]/input[type="checkbox"]
+    Select Checkbox    //tr[last()]/td[4]/input
 
     Reload Page
-    Checkbox Should Not Be Selected    //*[@id="checkbox-1"]
-    Checkbox Should Be Selected    //*[@id="checkbox-2"]
+    Checkbox Should Be Selected    //tr[last()]/td[4]/input
+    Checkbox Should Not Be Selected    //tr[last() - 1]/td[4]/input
     [Teardown]    Close Browser
 
 All TODO
@@ -123,6 +123,8 @@ Get completed
     Input Text    //*[@id="todo"]    ${thridTitle}
     Input Text    //*[@id="desc"]    ${thridDesc}
     Click Button    //*[@id="todo-form"]/button
+
+    Sleep    1
 
     Select Checkbox    //tr[last()]/td[4]/input
     Select Checkbox    //tr[last() - 1]/td[4]/input
