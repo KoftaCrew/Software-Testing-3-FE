@@ -38,6 +38,9 @@ function createNewRow(table, todo) {
     })(todo.id);
     completedCell.appendChild(checkbox);
     deleteCell.innerHTML = "<button class= 'btn btn-danger' onclick='deleteTodo(" + todo.id + ")'>Delete</button>";
+    //Added code for testing
+    titleCell.classList.add("title");
+    descCell.classList.add("desc");
 }
 
 function deleteTodo(id) {
